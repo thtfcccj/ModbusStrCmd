@@ -1,0 +1,13 @@
+
+.svn
+release
+GeneratedFiles/
+debug
+Deleted/
+tmp
+*.pdb
+*.ncb
+*.idb
+*.bak
+Info.db3
+/*.user
