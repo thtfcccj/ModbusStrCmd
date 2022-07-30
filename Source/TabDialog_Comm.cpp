@@ -268,11 +268,11 @@ void TabDialog::RcvEndPro(int DataInvalid)//数据无效状态,0有效
         RcvDataBuf[RcvCount - 2] = '\0';//强制加结束字符
         QString RcvData = codec->toUnicode(QByteArray((char*)&RcvDataBuf[1 + RcvStrStartPos]));
         Note.append(RcvData);
+        ValidCount++; //数据对了
       }
     }
   }
   MsgNote(Note, -1); //行数据强制到log
-  ValidCount++;
   if(SendLineCount < 0) return; //单行时完成
 
   //多行时
